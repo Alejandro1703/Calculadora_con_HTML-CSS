@@ -1,0 +1,127 @@
+.mod1, .mod2, .mod3, .mod4, .mod5 {
+    display: none; /*Quitados del medio*/
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculadora {
+  width: 650px;
+  height: 700px;
+  background-color: rgb(81, 55, 197);
+  border: solid 7px rgb(86, 60, 203);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "pt pt pt pt pt"
+    "num7 num8 num9 on ac"
+    "num4 num5 num6 prc dvs"
+    "num1 num2 num3 sum rest"
+    "num0 pto exp mod igl";
+  gap: 14px; 
+  padding: 8px;
+  box-sizing: border-box;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.pt   { grid-area: pt; }
+.num7 { grid-area: num7; }
+.num8 { grid-area: num8; }
+.num9 { grid-area: num9; }
+.on   { grid-area: on; }
+.ac   { grid-area: ac; }
+.num4 { grid-area: num4; }
+.num5 { grid-area: num5; }
+.num6 { grid-area: num6; }
+.prc  { grid-area: prc; }
+.dvs  { grid-area: dvs; }
+.num1 { grid-area: num1; }
+.num2 { grid-area: num2; }
+.num3 { grid-area: num3; }
+.sum  { grid-area: sum; }
+.rest { grid-area: rest; }
+.num0 { grid-area: num0; }
+.pto  { grid-area: pto; }
+.exp  { grid-area: exp; }
+.mod  { grid-area: mod; }
+.igl  { grid-area: igl; }
+
+.num1, .num2, .num3, .num4, 
+.num5, .num6, .num7, .num8, 
+.num9, .num0, .on, .ac, 
+.prc, .dvs, .sum, .rest,
+.pto, .exp, .mod, .igl{
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: white;
+  background-color: rgb(80, 80, 80);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.calculadora > div:hover {
+    background-color: rgb(61, 56, 56) ;
+    transition: 0.4s;
+}
+
+.pt {
+  background: linear-gradient(to right, #8dc3ec, #edeff1) ;
+  align-items: center;
+  cursor:auto ;
+  border-radius: 13px;
+}
+
+@media (max-width: 800px) {
+
+    .mod1, .mod2, .mod3, .mod4, .mod5 {
+      display: flex; /*Los vuelvo a mostrar*/
+  }
+
+  .calculadora {
+    width: 90%;
+    height: auto;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      "pt pt pt pt pt"
+      "mod1 mod2 mod3 mod4 mod5"
+      "num7 num8 num9 on ac"
+      "num4 num5 num6 prc dvs"
+      "num1 num2 num3 sum rest"
+      "num0 pto exp mod igl";
+  }
+
+  .mod1 { grid-area: mod1; }
+  .mod2 { grid-area: mod2; }
+  .mod3 { grid-area: mod3; }
+  .mod4 { grid-area: mod4; }
+  .mod5 { grid-area: mod5; }
+
+  .mod1, .mod2, .mod3, .mod4, .mod5 {
+    border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: white;
+  background-color: rgb(80, 80, 80);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+  }
+
+}
+
